@@ -6,8 +6,8 @@ using System.Web.Http.Description;
 namespace WebApplication1.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
-    {
-        /// <summary>
+    {  
+        /// <summary> test
         /// Generates an URI-friendly ID for the <see cref="ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
         /// </summary>
         /// <param name="description">The <see cref="ApiDescription"/>.</param>
