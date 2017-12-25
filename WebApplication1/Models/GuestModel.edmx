@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MyBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="NumTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Num1" Type="int" />
+          <Property Name="Num2" Type="int" />
+          <Property Name="Num3" Type="int" />
+          <Property Name="Num4" Type="int" />
+          <Property Name="Num5" Type="int" />
+          <Property Name="Num6" Type="int" />
+          <Property Name="NumSP" Type="int" />
+          <Property Name="StartDate" Type="varchar" MaxLength="12" />
+          <Property Name="flag" Type="int" />
+          <Property Name="Seq" Type="int" />
+          <Property Name="SeqFlag" Type="int" />
+          <Property Name="cFlag" Type="int" />
+          <Property Name="NumTrend" Type="varchar" MaxLength="100" />
+          <Property Name="Num" Type="int" />
+        </EntityType>
+        <EntityContainer Name="MyBaseModelStoreContainer">
+          <EntitySet Name="NumTable" EntityType="Self.NumTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MyBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="NumTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Num1" Type="Int32" />
+          <Property Name="Num2" Type="Int32" />
+          <Property Name="Num3" Type="Int32" />
+          <Property Name="Num4" Type="Int32" />
+          <Property Name="Num5" Type="Int32" />
+          <Property Name="Num6" Type="Int32" />
+          <Property Name="NumSP" Type="Int32" />
+          <Property Name="StartDate" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="Seq" Type="Int32" />
+          <Property Name="SeqFlag" Type="Int32" />
+          <Property Name="cFlag" Type="Int32" />
+          <Property Name="NumTrend" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Num" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="MyBaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NumTable" EntityType="Self.NumTable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MyBaseModelStoreContainer" CdmEntityContainer="MyBaseEntities">
+          <EntitySetMapping Name="NumTable">
+            <EntityTypeMapping TypeName="MyBaseModel.NumTable">
+              <MappingFragment StoreEntitySet="NumTable">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Num1" ColumnName="Num1" />
+                <ScalarProperty Name="Num2" ColumnName="Num2" />
+                <ScalarProperty Name="Num3" ColumnName="Num3" />
+                <ScalarProperty Name="Num4" ColumnName="Num4" />
+                <ScalarProperty Name="Num5" ColumnName="Num5" />
+                <ScalarProperty Name="Num6" ColumnName="Num6" />
+                <ScalarProperty Name="NumSP" ColumnName="NumSP" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="Seq" ColumnName="Seq" />
+                <ScalarProperty Name="SeqFlag" ColumnName="SeqFlag" />
+                <ScalarProperty Name="cFlag" ColumnName="cFlag" />
+                <ScalarProperty Name="NumTrend" ColumnName="NumTrend" />
+                <ScalarProperty Name="Num" ColumnName="Num" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

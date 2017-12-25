@@ -1,0 +1,40 @@
+﻿
+<table cellpadding="4" cellspacing="4" width="90%" align="center"><tr><td height="10px">
+    Year : <input type="text" id="year" value="2017" /> 
+    </td><td>RowNum:<input type="text" id="PageSize" value="20" /></td><td><input type="button" value="Search" ng-click="loadNums()" /></td></tr></table>
+<table cellpadding="4" cellspacing="4" width="90%" align="center"
+          03. style="background-color: skyblue; border:solid 2px red; padding-top:20px;">
+    <thead>        
+        <tr style="background-color:#F5F5F5;">            
+            <th>ID</th>
+            <th>Num1</th>
+            <th>Num2</th>
+            <th>Num3</th>
+            <th>Num4</th>
+            <th>Num5</th>
+            <th>Num6</th>
+            <th>NumSP</th>
+            <th>Start Date</th>
+            <th>Seq</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr data-ng-repeat="Nums in NumTables">
+            <td>{{Nums.id}}</td>
+            <td>{{Nums.num1}}</td>
+            <td>{{Nums.num2}}</td>
+            <td>{{Nums.num3}}</td>
+            <td>{{Nums.num4}}</td>
+            <td>{{Nums.num5}}</td>
+            <td>{{Nums.num6}}</td>
+            <td>{{Nums.numSP}}</td>
+            <td>{{Nums.startDate}}</td>
+            <td>{{Nums.seq}}</td>
+            <td><a style="cursor:pointer" ng-click="editNumTable(Nums.id)">Edit</a></td>
+            <td><a style="cursor:pointer" ng-click="">Delete</a></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,34 @@
+﻿<style>
+    .isHot{
+        color : red ;
+    }
+</style>
+<table cellpadding="4" cellspacing="4" width="90%" align="center">
+    <tr>
+        <td><input type="button" value="Run" ng-click="RunGuest()" /></td>
+        <td><input type="button" value="Delete Last" ng-click="DeleteLast()" /></td>
+        <td><input type="button" value="Restore" ng-click="Restore()" /></td>
+        <td data-ng-repeat ="Val in CalResult | limitTo : 1">{{Val.shang}}</td>
+    </tr>
+</table>
+<table cellpadding="4" cellspacing="4" width="90%" align="center"
+       03. style="background-color: skyblue; border:solid 2px red; padding-top:20px;">
+    <thead>
+        <tr style="background-color:#F5F5F5;">            
+            <th>Number</th>
+            <th>Cal Value</th>
+            <th>Pre Trend Value</th>
+            <th>Trend Value</th>           
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr data-ng-repeat="Val in CalResult">
+            <td>{{Val.number}}</td>
+            <td>{{Val.cValue}}</td>
+            <td>{{Val.preTValue}}</td>
+            <td><div ng-class="{'isHot':parseInt(Val.tValue)>=0.6}">{{Val.tValue}}</div></td>
+        </tr>
+    </tbody>
+</table>
+
